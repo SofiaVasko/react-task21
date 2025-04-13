@@ -1,0 +1,186 @@
+.Posts {
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.Post {
+  background-color: rgb(34, 34, 36);
+  color: white;
+  width: 100%;
+  max-width: 600px;
+  border-radius: 4%;
+  text-align: center;
+}
+
+.Post-avatar {
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+}
+
+.Post-content {
+  font-size: 1.2rem;
+}
+
+.Post-photo {
+  width: 100%;
+  max-width: 400px;
+  -webkit-box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000,
+    -48px -20px 0px 50px rgba(0, 0, 0, 0);
+  box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000,
+    -48px -20px 0px 50px rgba(0, 0, 0, 0);
+  margin: 1rem 4rem;
+}
+
+.Post-icons,
+.Post-comment,
+.Post-like,
+.Post-row {
+  display: flex;
+  align-items: center;
+}
+
+.Post-row {
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+}
+
+.Post-icons {
+  justify-content: space-evenly;
+  padding-bottom: 0.5rem;
+}
+
+.Post-comment,
+.Post-like {
+  cursor: pointer;
+  position: relative;
+}
+
+form,
+fieldset {
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  color: white;
+}
+
+fieldset {
+  border: none;
+}
+
+input,
+select {
+  width: 100%;
+  max-width: 600px;
+  height: 2rem;
+  color: white;
+}
+
+legend {
+  font-size: 1.3rem;
+  color: #ea4a53;
+}
+
+input,
+select {
+  background-color: rgb(34, 34, 36);
+  border: 2px solid #ea4a53;
+  font-style: italic;
+  cursor: pointer;
+}
+
+.btn-getPost {
+  background-color: #ea4a53;
+  border: 1px solid #ea4a53;
+  width: 160px;
+  height: 2rem;
+  font-size: 1.2rem;
+  font-style: italic;
+  border-radius: 10px;
+  color: aliceblue;
+  cursor: pointer;
+}
+
+.btn-getPost:hover {
+  color: #ea4a53;
+  background-color: rgb(34, 34, 36);
+  transform: scale(1.1);
+}
+
+input:nth-child(odd) {
+  border: 2px solid rgb(129, 102, 102);
+}
+
+input:focus,
+select:focus {
+  background-color: #000000;
+}
+
+.btn-posts {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.btn-posts::before {
+  background: url(./store/img/comment.png) no-repeat;
+  position: absolute;
+  content: "";
+  top: -8px;
+  left: -35px;
+  right: 0;
+  bottom: 0px;
+  width: 34px;
+  height: 34px;
+}
+
+.btn-like::before {
+  background: url(./store/img/like.png) no-repeat;
+}
+
+.btn-posts:hover {
+  color: #92b290;
+}
+
+.btn-like:hover {
+  color: #c0989a;
+}
+
+@media (max-width: 600px) {
+  .Post {
+    max-width: 400px;
+  }
+  .Post-photo {
+    max-width: 300px;
+    margin: 1rem;
+  }
+
+  input,
+  select {
+    max-width: 400px;
+  }
+}
+
+@media (max-width: 400px) {
+  .Post {
+    max-width: 300px;
+  }
+  .Post-photo {
+    max-width: 250px;
+  }
+  .Post-row {
+    font-size: 0.8rem;
+  }
+  input,
+  select {
+    max-width: 300px;
+  }
+}
